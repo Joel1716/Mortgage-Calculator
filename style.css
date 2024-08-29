@@ -1,0 +1,266 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --second-part-color: hsl(202, 55%, 16%);
+  --text-color: hsl(200, 26%, 54%);
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: hsl(202, 86%, 94%);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+}
+main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: white;
+  max-width: 85rem;
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+}
+/* ////  THE SECOND GRID STYLES /////// */
+.second-part {
+  background-color: var(--second-part-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+  border-bottom-left-radius: 80px;
+}
+.second-part-img {
+  width: 50%;
+}
+h3 {
+  color: white;
+  font-size: 1.9rem;
+  margin-bottom: 1.4rem;
+}
+h3 + p {
+  text-align: center;
+  color: var(--text-color);
+  font-size: 1.4rem;
+}
+
+/* ////  THE FIRST GRID STYLES /////// */
+
+.first-part {
+  padding: 3rem;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+h2 {
+  font-size: 1.6rem;
+}
+a {
+  display: inline-block;
+  color: var(--text-color);
+  font-size: 1.3rem;
+  text-decoration: underline dotted var(--text-color);
+}
+.first-part-grid {
+  margin-top: 1rem;
+  padding: 1rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1.5rem;
+  row-gap: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+label {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--text-color);
+  display: block;
+}
+.amount {
+  grid-column: span 2;
+  position: relative;
+}
+.first-part-grid input {
+  width: 100%;
+  margin-top: 0.7rem;
+  padding: 0.8rem;
+  border-width: 1px;
+}
+.input-text-image {
+  width: 34px;
+  height: 33.3px;
+  background-color: lightblue;
+  position: absolute;
+  top: 24px;
+  left: 1.33px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: #555;
+}
+.options-1,
+.options-2 {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1rem;
+  border: 1px solid var(--text-color);
+}
+.options-1 label,
+.options-2 label {
+  font-size: 1.4rem;
+  color: black;
+}
+.options-2 {
+  margin-top: 0.7rem;
+}
+.options-container h4 {
+  font-size: 1.4rem;
+  color: var(--text-color);
+  margin-bottom: 0.8rem;
+  font-weight: 500;
+}
+button {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.2rem 3rem;
+  margin-top: 3rem;
+  border-radius: 30px;
+  background-color: hsl(61, 70%, 52%);
+  border: none;
+  font-weight: bold;
+}
+button img {
+  width: 1.9rem;
+  height: 1.9rem;
+}
+.required {
+  color: red;
+  margin-top: 0.6rem;
+}
+/* RADIO */
+#option1,
+#option2 {
+  accent-color: rgb(215, 218, 47, 0.5);
+  transform: scale(1.2);
+}
+
+/* NEW ELEMENTS */
+.new-second-grid-styles {
+  display: block;
+  padding: 3rem 1rem 0 2rem;
+}
+.new-results {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+.results-paragraph {
+  color: var(--text-color);
+  font-size: 1.5rem;
+}
+.new-container-styles {
+  margin-top: 3rem;
+  background-color: hsl(201, 58%, 9%);
+  border-top: 7px solid hsl(61, 70%, 52%);
+  border-radius: 13px;
+  border-start-end-radius: 13px;
+  border-start-start-radius: 13px;
+  max-width: 100%;
+  padding: 2rem 2.5rem;
+}
+.monthly-repayments {
+  font-size: 1.4rem;
+  color: var(--text-color);
+}
+.calc-results {
+  font-size: 5rem;
+  margin-top: 1rem;
+  color: hsl(61, 70%, 52%);
+  border-bottom: 1px solid var(--text-color);
+  padding-bottom: 3rem;
+}
+.total-value-text {
+  margin-top: 3rem;
+  color: var(--text-color);
+  font-size: 1.4rem;
+}
+.total-value {
+  font-size: 1.8rem;
+  margin-top: 0.9rem;
+  color: white;
+}
+
+/* MAX-WIDTH OF 656px */
+@media (max-width: 41em) {
+  html {
+    font-size: 50%;
+  }
+  .years-cont,
+  .interest-cont {
+    grid-column: span 2;
+  }
+  button {
+    font-size: 1.3rem;
+    padding: 1.2rem 1rem;
+  }
+  .second-part {
+    padding: 2.5rem;
+  }
+  .second-part-img {
+    width: 60%;
+  }
+}
+
+/* MAX-WIDTH FOR PHONE SCREEN: 512px */
+@media (max-width: 31em) {
+  main {
+    grid-template-columns: 1fr;
+    height: 100vh;
+  }
+  body {
+    padding: 0rem;
+  }
+  button {
+    width: 100%;
+    font-size: 1.6rem;
+    justify-content: center;
+  }
+  .second-part {
+    border-bottom-left-radius: 0;
+  }
+  .options-2 {
+    margin-top: 1rem;
+  }
+}
+/* SCREEN SIZE FOR STOP WATCHES */
+@media (max-width: 14em) {
+  html {
+    font-size: 37.5%;
+  }
+  header {
+    flex-direction: column;
+    align-items: start;
+    gap: 0.4rem;
+  }
+  input[type="radio"]#option1,
+  input[type="radio"]#option2 {
+    transform: scale(0.9);
+  }
+  button {
+    font-size: 1.4rem;
+  }
+}

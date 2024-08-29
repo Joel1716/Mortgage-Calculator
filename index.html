@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="queries.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Mortgage repayment calculator</title>
+  </head>
+  <body>
+    <main>
+      <div class="first-part">
+        <header>
+          <h2>Mortage Calculator</h2>
+          <a class="clear" href="#">Clear all</a>
+        </header>
+        <section class="first-part-grid">
+          <div class="amount">
+            <label for="amount">Mortgage Amount</label>
+            <!-- <p class="input-text-image">£</p> -->
+            <input class="amountInput" type="text" name="amount" id="amount" />
+            <p class="amount-paragraph"></p>
+          </div>
+          <div class="years-cont">
+            <label for="years">Mortgage Term</label>
+            <input class="years" type="text" name="years" id="years" />
+            <p class="years-paragraph"></p>
+          </div>
+          <div class="interest-cont">
+            <label for="interest">Interest Rate</label>
+            <input class="interest" type="text" name="interest" id="interest" />
+            <p class="interest-paragraph"></p>
+          </div>
+        </section>
+        <section class="options-container">
+          <h4>Mortgage Type</h4>
+          <div class="options-1">
+            <input
+              type="radio"
+              id="option1"
+              name="options"
+              value="Repayment"
+              class="js-options"
+            />
+            <label for="option1">Repayment</label>
+          </div>
+          <div class="options-2">
+            <input
+              type="radio"
+              id="option2"
+              name="options"
+              value="Interest"
+              class="js-options"
+            />
+            <label for="option2">Interest Only</label>
+          </div>
+          <p class="radio-paragraph"></p>
+        </section>
+        <button class="calculate">
+          <img src="./assets/images/icon-calculator.svg" alt="" />
+          <p>Calculate Repayments</p>
+        </button>
+      </div>
+      <div class="second-part">
+        <img
+          class="second-part-img"
+          src="./assets/images/illustration-empty.svg"
+          alt="Calculator illustration image"
+        />
+        <h3>Results shown here</h3>
+        <p>
+          Complete the form and click “calculate repayments” to see what your
+          monthly repayments would be.
+        </p>
+      </div>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
